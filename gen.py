@@ -47,4 +47,4 @@ for event in c.timeline:
         continue
     flag, city = parse_location(event)
     dates = parse_dates(event)
-    print(f'• {event.name} ({flag} {city}) {dates} {event.url}')
+    print(f'- [{event.name}]({event.url}) ({flag} {city}) {dates}')
