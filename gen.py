@@ -34,11 +34,11 @@ def parse_dates(event):
     begin = event.begin
     end = event.end - timedelta(days=1)
     if begin.year != end.year:
-        return event.begin.strftime('%-d %B %Y') + event.end.strftime('—%-d %B %Y')
+        return event.begin.strftime('%-d %B %Y') + event.end.strftime('–%-d %B %Y')
     if begin.month != end.month:
-        return event.begin.strftime('%-d %B') + event.end.strftime('—%-d %B %Y')
+        return event.begin.strftime('%-d %B') + event.end.strftime('–%-d %B %Y')
     if begin.day != end.day:
-        return event.begin.strftime('%-d') + event.end.strftime('—%-d %B %Y')
+        return event.begin.strftime('%-d') + event.end.strftime('–%-d %B %Y')
     return event.begin.strftime('%-d %B %Y')
 
 
